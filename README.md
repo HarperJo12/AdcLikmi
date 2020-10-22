@@ -3,4 +3,4 @@ Administration Accompanier Likmi (Adc Likmi) is an android application for manag
 
 In order to connect this apps to likmi web service, change baseUrl variable value in com/android/adclikmi/MainActivity.java to the web service domain. e.g : "https://INSERTTHEDOMAIN.com/api/".
 
-The minimum requirement android version of this apps is lollipop 5.0 (API 21).
+The minimum requirement android version of this app is lollipop 5.0 (API 21).
