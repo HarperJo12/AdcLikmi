@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="ifContentScrolls"
+    tools:context=".pengajuanPrmhnSidangFrg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main">
+
+        <LinearLayout
+            android:id="@+id/permohonan_sidang_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_trans_rounded"
+            android:layout_margin="15dp"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/frm_tgl_trans"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tgl-Trans"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <!--<TextView
+                android:id="@+id/frm_no_tiket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Tiket"
+                android:textAppearance="?android:textAppearanceMedium" />-->
+
+            <TextView
+                android:id="@+id/frm_paragraph1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:breakStrategy="balanced"
+                android:text="Bersama ini  saya, mahasiswa/i Sekolah Tinggi Manajemen Informatika dan Komputer LIKMI :"
+                android:textAppearance="?android:textAppearanceMedium" />
+
+            <TableLayout
+                android:id="@+id/mainGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="16"
+                android:shrinkColumns="*"
+                android:stretchColumns="*">
+
+                <!-- ROW 1  -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Lengkap"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/frm_nama_lengkap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Lengkap"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="NPM"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/frm_npm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="NPM"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                </TableRow>
+
+                <!-- ROW 2  -->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_ttl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_span="2"
+                        app:errorEnabled="true">
+
+                        <EditText
+                            android:id="@+id/frm_edit_ttl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Tempat, Tanggal Lahir"
+                            android:inputType="textMultiLine"
+                            android:lines="2" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </TableRow>
+
+                <!-- ROW 3  -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_alamat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:errorEnabled="true">
+
+                        <EditText
+                            android:id="@+id/frm_edit_alamat"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Alamat di Bandung"
+                            android:lines="2"
+                            android:inputType="textMultiLine" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_kode_pos"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+
+                        <EditText
+                            android:id="@+id/frm_edit_kdps"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Kode Pos"
+                            android:inputType="number" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </TableRow>
+
+                <!-- ROW 4  -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_no_telp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <EditText
+                            android:id="@+id/frm_edit_notel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Nomor Telepon"
+                            android:inputType="phone" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_no_handphone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:errorEnabled="true">
+
+                        <EditText
+                            android:id="@+id/frm_edit_hp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Nomor Handphone"
+                            android:inputType="phone" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </TableRow>
+
+                <!-- ROW 5  -->
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Program"
+                            android:textAppearance="?android:textAppearanceSmall" />
+
+                        <TextView
+                            android:id="@+id/frm_program"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Program"
+                            android:textAppearance="?android:textAppearanceMedium" />
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/frm_email"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:errorEnabled="true">
+
+                        <EditText
+                            android:id="@+id/frm_edit_eml"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ems="10"
+                            android:hint="Email"
+                            android:inputType="textEmailAddress" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jurusan"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/frm_jurusan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Jurusan"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bidang Minat"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/frm_bidang_minat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bidang Minat"
+                    android:textAppearance="?android:textAppearanceMedium" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/frm_judul_TA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/frm_edit_jdta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Judul Tugas Akhir"
+                    android:inputType="textMultiLine"
+                    android:lines="3" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/frm_nama_prs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/frm_edit_nmprs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Nama Perusahaan"
+                    android:inputType="textMultiLine"
+                    android:lines="2" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/frm_alamat_prs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/frm_edit_almprs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Alamat Perusahaan"
+                    android:inputType="textMultiLine"
+                    android:lines="3" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Pembimbing"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/frm_pembimbing_spinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Ko-Pembimbing"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/frm_kopembimbing_spinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tahun Semester"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/frm_semester_spinner"
+                    style="@style/Widget.AppCompat.Spinner.Underlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/frm_lmp_ta"
+                    style="?android:textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:text="Lampiran TA"
+                    android:theme="@style/StyledButton" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:id="@+id/frm_lmp_kwitansi"
+                    style="?android:textAppearanceMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:text="Lampiran Kwitansi"
+                    android:theme="@style/StyledButton" />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/frm_next"
+                style="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:text="Next"
+                android:theme="@style/StyledButton" />
+
+            </LinearLayout>-->
+
+            <!--<LinearLayout
+                android:id="@+id/frm_lampiran"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lampiran Naskah Tugas Akhir"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/frm_browseTA"
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Browse"
+                        android:padding="12dp"
+                        android:theme="@style/StyledButton"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/frm_uploadTA"
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Upload"
+                        android:padding="12dp"
+                        android:theme="@style/StyledButton"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/frm_imgViewTA"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+
+                <TextView
+                    android:id="@+id/frm_nameFileTA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/frm_lampiran2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lampiran Kwintansi"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="8dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/frm_browsekwi"
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Browse"
+                        android:padding="12dp"
+                        android:theme="@style/StyledButton"/>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/frm_uploadkwi"
+                        style="?android:textAppearanceMedium"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Upload"
+                        android:padding="12dp"
+                        android:theme="@style/StyledButton"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/frm_imgViewkwi"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"/>
+
+
+                <TextView
+                    android:id="@+id/frm_nameFilekwi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text=""
+                    android:textAppearance="?android:textAppearanceSmall"
+                    />
+            </LinearLayout>
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/frm_next"
+                style="?android:textAppearanceMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:text="Next"
+                android:theme="@style/StyledButton" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

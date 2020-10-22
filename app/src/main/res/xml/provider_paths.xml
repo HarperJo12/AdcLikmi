@@ -1,0 +1,9 @@
+<?xml version ="1.0" encoding ="utf-8"?>
+<paths>
+    <external-path name="files_root" path="Android/data/${applicationId}/" />
+    <external-path name="filesEx"  path="." /> <!--folder internal kalo ext storagenya kaya storage/653-321-->
+    <external-files-path name="external_files" path="." /> <!--kaya com.android tapi external-->
+    <cache-path name="cache" path="." />
+    <external-cache-path name="external_cache" path="." />
+    <files-path name="filesDat" path="." /> <!--kaya com.android tapi internal-->
+</paths>

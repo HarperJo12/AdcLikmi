@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Adc LIKMI</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="read_file">This application need to access your media, image and file</string>
+    <string name="write_file">This application need to access your media, image and file</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
